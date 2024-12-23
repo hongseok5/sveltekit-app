@@ -2,6 +2,7 @@ import prettier from 'eslint-config-prettier';
 import js from '@eslint/js';
 import svelte from 'eslint-plugin-svelte';
 import globals from 'globals';
+import { vitest } from 'vitest';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -15,6 +16,9 @@ export default [
 				...globals.browser,
 				...globals.node
 			}
+		},
+		plugins: {
+			vitest
 		}
 	},
 	{

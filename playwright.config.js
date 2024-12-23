@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
 	webServer: {
@@ -6,5 +6,15 @@ export default defineConfig({
 		port: 4173
 	},
 
-	testDir: 'e2e'
+	testDir: 'e2e',
+	projects:[
+		{
+			name: 'Desktop Chrome',
+			use: { ...devices['Desktop Chrome'] },
+		  },
+		  {
+			name: 'Mobile Safari',
+			use: { ...devices['iPhone 12'] },
+		  },
+	]
 });

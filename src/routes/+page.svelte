@@ -23,7 +23,7 @@
     <title> Brain Color </title>
 </svelte:head>
 
-<h1> 두뇌개발게임</h1>
+<h2> 두뇌개발게임</h2>
 <h3> 이번 주의 점수</h3>
 <table>
     <thead>
@@ -52,5 +52,5 @@
 </table>
 
 <p>
-    <button style="width:100%; height:60px" on:click={()=>{goto("/quiz")}}> play </button>
+    <button id="play-button" style="width:100%; height:60px" on:click={()=>{goto("/quiz")}}> play </button>
 </p>
